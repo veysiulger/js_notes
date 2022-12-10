@@ -1,0 +1,51 @@
+<!-- GİRİŞ
+
+    JavaScript, betik bir dildir, yorumlanarak çalışır. 
+    Çalışabilmesi için, HTML ile birlikte kullanılır. 
+-->
+<!-- JS DOSYALARINI DAHİL ETMEK
+
+	Yoğun kod içeren uygulamalarda, js kodları,
+	dosya olarak, dışarıdan yüklenmelidir. HTML ile 
+	iç içe yazılmamalıdır.
+	
+	
+
+    Eğer aynı klasörde iseler, ./ yazılır. Yani,
+    <script src="./index.js"></script>
+    eğer bir üst dizine çıkılacak ise, ../
+    yazılır.
+-->
+
+<!-- ASYNC VE DEFER 
+    Asenkron ve ertelemeli yükleme. True veya false
+    değerlerini atayabiliriz. Varsayılan olarak true değerindedirler.
+
+    Asenkron yükleme yapılacak ise,
+    <script src="./index.js" async></script>
+    yazarız. Böylece html sayfası yüklenmeden kendisi
+    bağımsız olarak yüklenir.
+
+    defer yükleme yapılacak ise,
+    <script src="./index.js" defer></script>
+    Eğer defer ile tanımlama yapılırsa, önce
+    html sayfası yüklenir, ardından js kodu yürütülür.
+
+    Her ikisi de eklenebilir;
+    <script src="./index.js" async defer></script>
+-->
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lec1_temeller.js"></script>
+ </head>
+ <body>
+    
+ </body>
+ </html>
+
