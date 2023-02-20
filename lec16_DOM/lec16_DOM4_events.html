@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 onclick="change(this)">Lorem ipsum dolor sit amet.</h1>
+
+    <button onclick="whatIsDate(this)">Time!</button>
+
+    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Hello</div>
+    <script>
+      /**   JAVASCRIPT EVENTS  *****
+       *this: Hangi etiket üzerine tıklanıyorsa, parametre olarak onu alır.
+    
+       *
+       */
+
+      function change(id) {
+        id.innerHTML = "Ooops!";
+      }
+
+      function whatIsDate(id) {
+        id.innerHTML=Date();
+      }
+
+      function mouseOver(id){
+
+        id.innerHTML="mouse over! Greating!";
+
+      }
+      function mouseOut(id){
+
+        id.innerHTML="Bye!"
+      }
+    </script>
+  </body>
+</html>

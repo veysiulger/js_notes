@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Time!</button>
+    <button id="btn2">Time2!</button>
+  
+    <div id="date">test</div>
+    <div id="date2">test area:</div>
+
+    <div id="div1">Random number:</div>
+    <script>
+      /**   JAVASCRIPT EVENTS  *****
+       *Diyelim ki, kullanıcı butona tıklayınca, 
+       bir fonksiyonun çalışmasını istiyoruz. 
+
+        addEventListener("mouseover", myFunc1) metodu
+        ile istediğimiz gibi olayy ekleyebiliriz.
+       
+
+       */
+      document.getElementById("btn").addEventListener("click", showDate);
+      window.addEventListener("resize", showNumber);
+      var x = document.getElementById("btn2");
+      x.addEventListener("mouseover", myFunc1);
+      x.addEventListener("click", myFunc2);
+      x.addEventListener("mouseout", myFunc3);
+
+      function showDate() {
+        document.getElementById("date").innerHTML = Date();
+      }
+
+      function myFunc1() {
+        document.getElementById("date2").innerHTML += " Moused over!<br>";
+      }
+      function myFunc2() {
+        document.getElementById("date2").innerHTML += " Clicked!<br>";
+      }
+      function myFunc3() {
+        document.getElementById("date2").innerHTML += " Moused out!<br>";
+      }
+
+      function showNumber() {
+        document.getElementById("div1").innerHTML += " "+Math.random()+"<br>";
+      }
+    </script>
+  </body>
+</html>

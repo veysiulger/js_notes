@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div id="header" class="">
+        <p class="test">test</p>
+        <p class="test">test</p>
+        <p class="test">test</p>
+        <p class="test2">test</p>
+      </div>
+
+      <div id="footer" class=""><footer>Burası Footer</footer></div>
+    </div>
+
+    <script>
+      /*******    DOM: Document object model.     *********
+          *
+          * DOM W3C tarafından getirilen, HTML5'de bir iletişim
+          * standartıdır. Bu sebeple sadece JS'de değil, diğer
+          * sunucu dilleri ile de uyumlu olmaktadır.
+          *
+          *  WINDOW
+          *  {
+          *      Dom {html,body, div, ...}
+          *      Bom {navigator,screen,history,frames,location}
+          *      Javascript  {Object, Array, Function, ...}
+          *  }
+          * 
+          * DOM ile
+          *      css stil özelliklerine erişebiliriz.
+          *      Sayfa yapılandırabiliriz.
+          *      Sayfa üzerinde tüm ögeleri kontrol edebiliriz.
+          * 
+             HTML Elemanlarına ulaşma metotları:
+           
+                 Document üzerinden, Etiket, id ve class anahtarları ile erişim sağlanabilir.
+                 document.getElementById(id)	
+                 document.getElementsByTagName(name)	
+                 document.getElementsByClassName(name)	
+         
+             HTML Elemanlarını Değiştirmek
+         
+                 element.innerHTML 
+                 element.attribute 
+                 element.style.property 
+                 element.setAttribute(attribute, value)
+         
+             HTML Elemanlarını Ekleme ve Silme
+         
+                 document.createElement(element)	
+                 document.removeChild(element)	
+                 document.appendChild(element)	
+                 document.replaceChild(new, old)	
+                 document.write(text)
+         
+             */
+
+      //ID İle HTML Elemanını Bulmak
+
+      let element1 = document.getElementById("header");
+      console.log(element1.className);
+
+      //Tag İle HTML Elemanını Bulmak
+
+      let element2 = document.getElementsByTagName("footer");
+      console.log(element2);
+
+      /*Çok sayıda html elemanı seçmek için bir çok farklı metot var.*/
+
+      const x = document.querySelectorAll("p.test"); //p etiketinde, intro class olanların hepsini al.
+      console.log(x);
+
+      let taskList2 = document.getElementsByClassName("footer-li");
+      for (let value of taskList2) {
+        value.style.color = "blue";
+        console.log("value: " + value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>deneme deneme deneme</p>
+
+    <div id="test-div"></div>
+    <script>
+      /**   NOTES  *****
+     Yeni etiket oluşturmak:
+     p isimli paragraf oluşturup içerisine
+     metin ekliyoruz. Daha sonrada bu p etiketini
+     test-div içerisine atıyoruz. 
+
+     Varolan etiketi silmek
+     remove() metodu kullanılabilir.
+
+       */
+      const paragraph = document.createElement("p");
+      const node = document.createTextNode("test paragraf.");
+      paragraph.appendChild(node);
+
+      const element = document.getElementById("test-div");
+      element.appendChild(paragraph);
+    </script>
+  </body>
+</html>

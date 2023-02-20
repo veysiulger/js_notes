@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="test-div">
+      <ul id="content-ul">
+        <li class="content_right-li"><input type="checkbox" />Checkbox 1</li>
+        <li class="content_right-li"><input type="checkbox" />Checkbox 2</li>
+        <li class="content_right-li"><input type="checkbox" />Checkbox 3</li>
+        <li class="content_right-li"><input type="checkbox" />Checkbox 4</li>
+      </ul>
+    </div>
+    <script>
+      /**   NAVIGATION  *****
+         Düğümler arasında gezinmek için,
+         ya da etiketlerin içindeki etiketlere
+         ulaşmak için, 
+
+  --- children,firstElementChild, lastElementChild, 
+  --- parentElement
+  --- nextElementSibling, previousElementSibling
+    
+          anahtarları kullanılabilir.
+
+       */
+      let taskList = document.getElementById("content-ul");
+      let taskList2 = (taskList.children[0].children[0].checked = true); //input
+    </script>
+  </body>
+</html>

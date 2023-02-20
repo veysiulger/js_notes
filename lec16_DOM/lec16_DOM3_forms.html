@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="testID"></div>
+
+    <form action="#" name="myForm" onsubmit="return validateForm(event)">
+      <input type="text" name="fname" />
+      <input type="submit" value="Submit" />
+    </form>
+    <p id="demo2"></p>
+
+    <!--*************-->
+
+    <h2>Validation</h2>
+
+    <form action="#">
+      <input id="numb" />
+
+      <button type="button" onclick="myFunc()">Submit</button>
+    </form>
+    <p id="demo1"></p>
+    <script>
+      /**   JAVASCRIPT FORM VALIDATION   *****
+       * 
+       * fonksiyon parametresi olarak event yazdık.
+       * event.preventDefault(); sayesinde 
+       * sayfa yenilenmez.
+       *
+       */
+
+      function validateForm(event) {
+        let x = document.forms["myForm"]["fname"].value;
+        let test="";
+
+        if (x == "") {
+          alert("İsim alanı boş bırakılamaz!");
+          return false;
+        }else{
+          
+          test="girilen metin:"+x;
+          document.getElementById("demo2").innerHTML=test;
+        }
+        event.preventDefault();
+      }
+
+      
+
+      function myFunc() {
+        let x = document.getElementById("numb").value;
+        let txt;
+        if (x > 10 || x == "" || x < 1 || isNaN(x)) {
+          txt = "gecerli degil!";
+        } else {
+          txt = "gecerli, girilen sayi:" + x;
+        }
+
+        document.getElementById("demo1").innerHTML = txt;
+      }
+    </script>
+  </body>
+</html>
