@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Birinci paragraf</p>
+    <p>İkinci paragraf</p>
+    <p>Üçüncü paragraf</p>
+    <p>Dördüncü paragraf</p>
+    <div>
+      <p>Beşinci paragraf</p>
+    </div>
+    <div id="test-div"></div>
+    <script>
+      const myCol=document.getElementsByTagName("p");
+      console.log(myCol);
+      /* Tum p etiketleri, myCol icine atandi. 
+      Diyelim ki, 2. paragrafa erisecegiz.
+      O zaman myCol[1] deriz.
+       */
+       console.log(myCol[1]);
+       console.log(myCol.length);// kac tane p etiketi var?
+    
+    </script>
+  </body>
+</html>
