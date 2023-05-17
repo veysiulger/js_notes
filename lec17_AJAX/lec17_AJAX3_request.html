@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <script>
+      /*open(method, url, async):
+      method:post veya get olabilir.
+      url:sunucu/dosya lokasyonu.
+      async:true ise asenkron, false ise senkron.
+
+      send():get icin istek sunucuya gonderilir.
+      send(string):post icin istek sunucuya gonderilir.
+      */
+
+      //Eger get ya da post metotlarinda, bilgi iletmek istersek;
+      xhttp.open("GET", "test.php?name=test&surname=test");
+      xhttp.send();
+
+    </script>
+  </body>
+</html>

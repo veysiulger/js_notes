@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      <h1>AJAX teknigi ile, bu metni degistirebilirsiniz!</h1>
+      <button type="button" onclick="loadTxt()">Metni Degistir</button>
+    </div>
+
+    <script>
+      /*AJAX bir tekniktir. WEB sayfasi yenilenmeden
+        form/buton islemlerinin gerceklesmesini mumkun kilar.
+        Arka planda web sayfasindan sunucuya veri gonderimini saglar.
+        Bir cok modern browser, XMLHttpRequest nesnesini destekler.
+
+        Modern browser'lar, XMLHttpRequest yerine fetch API
+        kullanabilirler. Fetch API ile daha basit bir sekilde,
+        ayni islev yapilabilir.
+
+        Fetch API arayuzu, web sunucularina HTTP istegi yapmak icin, 
+        tarayiciya izin verir.
+        */
+
+      function loadTxt() {
+        const xhttp = new XMLHttpRequest();
+        //XMLHttpRequest nesnesi yaratilir.
+        xhttp.onload = function () {//callback function
+            //Cevap hazir oldugunda ne yapilacak?
+            //istek alindiginda ne olacak?
+          document.getElementById("test").innerHTML = this.responseText;
+          //responseText: cevap string olarak gelecek.
+
+        };
+
+        xhttp.open("GET", "ajax.txt", true); 
+        xhttp.send();//istek gonderilir.
+      }
+
+      /* 
+      AJAX olayinin gerceklesmesi:
+
+      1) web sayfasinda bir olay gerceklesir. Ornegin, butona tiklanmasi.
+      2) XMLHttpRequest objesi js tarafindan yaratilir.
+      3) XMLHttpRequest nesnesi, web sunucuya istek gonderir.
+      4) Web unucu istegi isler.
+      5) Web sunucu bir cevap gonderir web sayfasina.
+      6) JS, cevabi okur.
+      7) Uygun aksiyon JS tarafindan gerceklenir.
+
+
+
+  
+
+      */
+
+      
+    </script>
+  </body>
+</html>

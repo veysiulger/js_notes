@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      <h1>AJAX teknigi ile, bu metni degistirebilirsiniz!</h1>
+      <button type="button" onclick="loadTxt()">Metni Degistir</button>
+    </div>
+    <script>
+      /*XMLHttp nesnesinin bir cok metot ve ozellikleri vardir.
+      Bazi Metotlar:
+      new XMLHttpRequest(): nesne yaratilir.
+      abort():o anki istek iptal edilir.
+      getAllResponseHeaders():Header bilgisi donderir.
+      open(): istegi belirler.
+      send():istek server'a sutlanir.
+
+      Bazi Ozellikler:
+      
+      onload:
+      onreadystatechange:
+      readyState:
+      responseText:
+      responseXML:
+      status:
+
+     onreadystatechange kullanalim:
+      
+      Buradaki onemli husus sudur: islem, readyState 
+      ozelligiyle kontrol edilir. Bu ozellik,
+      istek baslatilmazsa 0,
+      sunucu baglantisi kurulduysa 1,
+      istek alinirsa 2,
+      istek islenirse 3,
+      cevap hazirsa 4,
+      */
+      function loadTxt() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            //readyState durumu 4, ve durum kodu 200 ise...
+            document.getElementById("test").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "ajax.txt");
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
