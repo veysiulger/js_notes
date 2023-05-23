@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <h1 id="header">hello!</h1>
+  <input type="button" value="back" onclick="goBack()" />
+  <body>
+    <script>
+      /*BOM: Tarayici obje modeli
+        BOM objeleri asagidaki gibidir:
+        1-window
+        2-navigator
+        3-screen
+        4-location
+        5-history
+        6-document
+
+        tarayicida bulunan her bir sekme aslinda bir
+        window objesidir. alert(), close() gibi metotlar
+        ile kullanabiliriz.
+
+        window nesnesi, tum browserlarda desteklenir.
+        */
+      //pencere yuksekligi ve genisligi
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      console.log("genislik:" + width + "\n" + "yukseklik:" + height);
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

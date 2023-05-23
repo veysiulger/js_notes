@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <p id="test">hello!</p>
+  
+  <body>
+    <script>
+      /*
+      Location Nesnesi. o anki URL hakkindaki bilgileri kapsar.
+      
+      window.location.href: o anki sayfanin URL bilgisi verir.
+      window.location.hostname: domain adini verir.
+      window.location.pathname: sayfanin dosya ve path'ini verir.
+      window.location.protocol: kullanilan web protokolunu verir.
+
+      */
+      let HostName=window.location.hostname;
+      let Href=window.location.href;
+      let PathName=window.location.pathname;
+      let Protocol=window.location.protocol;
+
+      console.log("domain adi:"+HostName);
+      console.log("Href:"+Href);
+      console.log("path:"+PathName);
+      console.log("Protokol:"+Protocol);
+ </script>
+  </body>
+</html>

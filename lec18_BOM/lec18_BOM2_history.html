@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <h1 id="header">hello!</h1>
+  <input type="button" value="ileri" onclick="goForward()" />
+  <input type="button" value="geri" onclick="goBack()" />
+  <body>
+    <script>
+      /*History objesi:Tarayici gecmisini kapsar. Kullanici mahremiyetinden
+      oturu Dogal olarak bu nesnenin kullaniminda bir sinirlama vardir.
+      
+      Tarayicidaki ileri/geri gitme gibi
+      islemleri, back() ya da forward() metotlari ile
+      yapabiliriz.
+      */
+      function goBack() {
+        window.history.back();
+      }
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
+  </body>
+</html>

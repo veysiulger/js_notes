@@ -30,7 +30,7 @@ function USER(username, email, age) {
   this.email = email;
   this.age;
 
-  /**Burada abject'i bir fonksiyon gibi yazdık. yani statik değer kullanmak yerine,
+  /**Burada object'i bir fonksiyon gibi yazdık. yani statik değer kullanmak yerine,
    * her object oluşturulduğunda, farklı değerler, obje tarafından kullanılabilmektedir.
    * Aslında biz burada bir class tanımlamış olduk.
    */
